@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Teboho Pawnshop - Home</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+	
+	<style>
+        #results { margin-top: 20px; }
+        .product { margin-bottom: 15px; display: flex; align-items: center; }
+        .product img { width: 70px; height: 70px; margin-right: 10px; }
+    </style
+	
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">☰</div>
+        <a href="index.html">
+            <img src="assets/img/logo.png" alt="Trendy Clothing Store Logo" class="logo">
+        </a>
+        <div class="cart-icon" onclick="viewCart()">🛒</div>
+    </header>
+	
+    <nav class="menu" id="menu">
+        <div class="close" id="close">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+			<li><a href="shop.html">Shop</a></li>
+			<li><a href="documents/catalogue.html">Catalogue</a></li>
+            <li><a href="documents/contacts.html">Get In Touch</a></li>
+			<li><a href="documents/terms.html">Terms & Conditions</a></li>
+        </ul>
+    </nav>
+	
+	<!--Shop Category-->
+    <div class="carousel-container">
+    <div class="shortcut-bar">
+    <a href="shop.html" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/icon01.png" alt="All">
+        <span>Shop</span>
+    </a>
+	<!--Sound Category-->
+        <a href="shop.html?filter=sound_system" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/icon02.png" alt="All">
+        <span>Sound System</span>
+    </a>
+	<!--Tvs Category-->
+    <a href="shop.html?filter=tv" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/icon03.png" alt="All">
+        <span>TV</span>
+    </a>
+	<!--Computer Category-->
+    <a href="shop.html?filter=computer" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/icon04.png" alt="All">
+        <span>Computer</span>
+    </a>
+    <!--Gaming Category-->
+    <a href="shop.html?filter=gaming" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/icon05.png" alt="All">
+        <span>Gaming</span>
+    </a>
+    <!--Mobile Phone Category-->
+    <a href="shop.html?filter=cell_phones" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/icon06.png" alt="All">
+        <span>Cellphones</span>
+    </a>
+	<!--Fridge Category-->
+    <a href="shop.html?filter=fridge" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/icon07.png" alt="All">
+        <span>Fridge</span>
+    </a>
+	<!--Stoves Category-->
+    <a href="shop.html?filter=stoves" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/icon08.png" alt="All">
+        <span>Stove & Ovens</span>
+    </a>
+	<!--Furniture Category-->
+    <a href="shop.html?filter=furniture" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/icon09.png" alt="All">
+        <span>Furniture</span>
+    </a>
+	<!--Cars Category-->
+    <a href="shop.html?filter=cars" class="shortcut-item" data-filter="all">
+        <img src="assets/img/carousel_icons/icon10.png" alt="All">
+        <span>Cars</span>
+    </a>
+    </div>
+  </div>
+
+<!-- HERO BANNER SLIDES -->
+<section>
+	<div class="slideshow-container">
+            <div class="slide fade">
+			<a href="index.html">
+                <img src="assets/img/quickshop/1.jpg" alt="Slide 1">
+				</a>
+            </div>
+            <div class="slide fade">
+			<a href="index.html">
+                <img src="assets/img/quickshop/2.jpg" alt="Slide 2">
+				</a>
+            </div>
+            <div class="slide fade">
+			<a href="index.html">
+                <img src="assets/img/quickshop/3.jpg" alt="Slide 3">
+				</a>
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+		</section>
+
+    
+    <main>
+	
+	<div id="search-container">
+    <input type="text" id="search-input" placeholder="What are you looking for?...">
+    <button onclick="searchProducts()">Find</button>
+    <button id="clear-button" style="display: none;" onclick="clearResults()">Reset</button>
+</div>
+<div id="results"></div>
+	
+             <!-- Features Section -->
+        <section class="features">
+        <h2>Our Services</h2>
+        <div class="container">
+        <div class="feature-item">
+            <h3>We Buy</h3>
+            <img src="assets/img/quickshop/webuy.jpeg" alt="Newaarival" class="feature-image">
+			<p>Relocating? Paying storage fees for unwanted good. 
+			We buy all unwanted, such as electronics, furniture, equipment, tools ,leisure an appliances. 
+			When we buy products, we make sure that they are in great working condition. We offer value for money.</p>
+        </div>
+        <div class="feature-item">
+            <h3>We Sell</h3>
+            <img src="assets/img/quickshop/wesell.jpg" alt="Pants" class="feature-image">
+			<p>We have a wide variety of stock from brand new products, inventory write offs and secondhand goods. 
+			This includes electronics, furniture, appliances, vehicles, gym equipment etc... 
+			Tell us what you are looking for by filling in our online enquiry form or CHAT TO US, we will respond promptly.</p>
+        </div>
+        <div class="feature-item">
+            <h3>We Pawn</h3>
+			<a href="#featured-items">
+            <img src="assets/img/quickshop/wepawn.jpeg" alt="Sale" class="feature-image"></a>
+			<p>For financial relief, pawn your goods for cash and fetch them at a later stage. 
+			We pawn electronics, furniture, cars, appliances, luxury assets, boats, quad bikes and plant equipment. 
+			We offer competitive interest rates.</p>
+        </div>
+        </div>
+        </section>
+		
+		<!-- About-Us Section -->
+		 <section id="about-us" class="about-us">
+    <div class="container-about">
+      <div class="about-content">
+        <div class="about-img">
+          <img src="assets/img/quickshop/aboutus.jpg" alt="Our Team" />
+        </div>
+        <div class="about-text">
+          <h1>About Teboho Buy And Sell</h1>
+          <p>
+            Welcome to <strong>Teboho Buy And Sell</strong>Teboho Pawn was birthed in 2020 through our mother company Motemo Finance. 
+			There was a niche market for our customers who had unwanted goods in great condition or in dire need for financial assistance to either sell or pawn their goods at a competitive retail price.  
+			Our target market is  private individuals who needs instant cash, companies with write off goods, entrepreneurs, and people in the community.
+          </p>
+          <p>
+            This facet of our business offers good quality items below the retail market price. We are license with the SAPS (South African Police Services), under “Second-Hand Goods Act No. 6 of 2009″. 
+			We are also a member of the NCR (National Credit Regulator).
+          </p>
+          <button class="btn">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+	<!-- Staff Section -->
+    <section class="promotion-heading">
+	<h1>Our Staff</h1>
+	</section>
+
+<section id="staff-items">
+<div class="staff-master">
+    <div class="staff-container">
+        <div class="staff" data-item-id="1">
+            <img src="assets/img/quickshop/Profile-1.jpg" alt="Product 1" class="staff-image">
+            <h2 class="staff-name">Kelebogile Mabidikama</h2>
+        </div>
+		<div class="staff" data-item-id="1">
+            <img src="assets/img/quickshop/Profile-2.jpg" alt="Product 1" class="staff-image">
+            <h2 class="staff-name">Katlego Nhubyani</h2>
+        </div>
+		<div class="staff" data-item-id="1">
+            <img src="assets/img/quickshop/Profile-4.jpg" alt="Product 1" class="staff-image">
+            <h2 class="staff-name">Ernest Msibi</h2>
+        </div>
+		<div class="staff" data-item-id="1">
+            <img src="assets/img/quickshop/Profile-5.jpg" alt="Product 1" class="staff-image">
+            <h2 class="staff-name">Zinhle Mahua</h2>
+        </div>
+		<div class="staff" data-item-id="1">
+            <img src="assets/img/quickshop/Profile-6.jpg" alt="Product 1" class="staff-image">
+            <h2 class="staff-name">Bongani Mashabane</h2>
+        </div>
+    </div>
+	</div>
+</section>
+
+		<!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+  <div class="container-testimonials">
+    <h1>What Our Customers Say</h1>
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <p>"Truwaer Clothing has completely changed my style! The quality is amazing and the designs are so unique. Highly recommend!"</p>
+        <h4>- Sarah J.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"I love how versatile their pieces are. They fit perfectly for any occasion, and I always get compliments!"</p>
+        <h4>- Mark R.</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Fast shipping, amazing customer service, and beautiful clothing. I'm a customer for life!"</p>
+        <h4>- Emily S.</h4>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button id="prev">❮</button>
+      <button id="next">❯</button>
+    </div>
+  </div>
+</section>
+
+
+		<!-- Contact Section -->
+<section class="contact">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Fill out the form below or connect with us on social media.</p>
+        
+    <form class="contact-form" id="contactForm">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+            <label for="contactNumber">Contact Number</label>
+            <input type="tel" id="contactNumber" name="contactNumber" placeholder="Your Contact Number" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Your Address" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+        </div>
+        <button type="button" class="btn" onclick="sendMessage()">Send Message</button>
+    </form>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <h3>Connect with us</h3>
+            <ul>
+                <li><a href="https://web.facebook.com/TPawn?_rdc=1&_rdr#" target="_blank" aria-label="Facebook"><img src="assets/img/socialicons/facebook.png" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/teboho_pawn/" target="_blank" aria-label="Instagram"><img src="assets/img/socialicons/instagram.png" alt="Instagram"></a></li>
+                <li><a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="assets/img/socialicons/youtube.png" alt="YouTube"></a></li>
+				<li><a href="https://www.tiktok.com/@tebohopawnshop" target="_blank" aria-label="Tiktok"><img src="assets/img/socialicons/tiktok.png" alt="Tiktok"></a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+			<!-- FAQ Sectin -->
+	<h1>Frequently Asked Questions (FAQs)</h1>
+	<div id="faqs">
+    <div class="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(0)">
+                <span>What is your return policy?</span>
+                <span>&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                We accept returns within 30 days of purchase. Items must be unworn, unwashed, and in their original packaging. Please contact customer service to initiate your return.
+            </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(1)">
+                <span>How long does shipping take?</span>
+                <span>&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                Standard delivery takes 3-5 business days. Expedited shipping options are available at checkout for faster delivery.
+            </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(2)">
+                <span>Do you offer international shipping?</span>
+                <span>&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                Yes, we offer international shipping to most countries. Shipping fees and estimated delivery times vary by location and will be shown during checkout.
+            </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(3)">
+                <span>How can I track my order?</span>
+                <span>&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                Once your order is shipped, you will receive a confirmation email with a tracking number and a link to track your package.
+            </div>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(4)">
+                <span>Do you have physical store locations?</span>
+                <span>&#9660;</span>
+            </div>
+            <div class="faq-answer">
+                Yes, we have physical stores in select cities. Please visit our store locator page to find a store near you.
+            </div>
+        </div>
+    </div>
+	
+    </main> 
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <button class="close-button" onclick="closeCart()">Close</button>
+        <h2>Your Cart</h2>
+        
+        <!-- Cart Items Section -->
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">Total: R 0.00</div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <div id="summaryItems"></div> <!-- Will populate dynamically -->
+            <div id="additionalCost" style="display: none;">Delivery Cost: R 0.00</div> <!-- Delivery Cost will show based on selection -->
+        </div>
+
+        <!-- Billing Address Form -->
+        <div class="billing-address">
+            <h3>Billing Address</h3>
+            <input type="text" id="billingName" placeholder="Full Name" required>
+            <input type="email" id="billingEmail" placeholder="Email" required>
+            <input type="text" id="billingAddress" placeholder="Address" required>
+            <input type="tel" id="billingPhone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Payment Methods (Updated to Dropdown) -->
+        <div class="payment-methods">
+            <h3>Payment Method</h3>
+            <label for="paymentMethod">Select Payment Method</label>
+            <select id="paymentMethod" onchange="updatePaymentDetails()">
+                <option value="directTransfer">Direct Transfer</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <div id="bankDetails" style="display: none;">
+                <h4>Banking Details</h4>
+                <p>Bank Name: Capitec Bank</p>
+                <p>Account Number: 1444105424</p>
+                <p>SWIFT Code: 40017</p>
+            </div>
+
+            <div id="paypalDetails" style="display: none;">
+                <h4>PayPal Account</h4>
+                <p>Account Email: requesteat@paypal.com</p>
+            </div>
+        </div>
+
+        <!-- Delivery or Pickup Options (Updated to Dropdown) -->
+        <div class="delivery-options">
+            <h3>Delivery Options</h3>
+            <label for="deliveryOption">Select Delivery Option</label>
+            <select id="deliveryOption" onchange="updateDeliveryCost()">
+                <option value="pickup">Pickup (No additional cost)</option>
+                <option value="delivery">Delivery (Additional Cost)</option>
+            </select>
+        </div>
+
+        <!-- Place Order Button -->
+        <button id="placeOrderBtn" onclick="placeOrder()" class="cart-button place-order-button" disabled>Place Order</button>
+        <button onclick="clearCart()" class="cart-button clear-button">🗑️ Clear My Cart</button>
+    </div>
+	
+	<!-- Shop Now Button (when cart is empty) -->
+        <div id="emptyCartMessage" style="display: none;">
+            <p>Your cart is empty.</p>
+            <a href="index.html" class="shop-now-button">Shop Now</a>
+        </div>
+    </div>
+</div>
+
+    <script src="assets/js/slides.js"></script> 
+    <script src="assets/js/script.js"></script> 
+	
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Trendy Clothing Store",
+  "url": "https://www.yourwebsite.com",
+  "logo": "https://www.yourwebsite.com/assets/img/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-800-555-5555",
+    "contactType": "Customer Service",
+    "areaServed": "South Africa",
+    "availableLanguage": ["English"]
+  }
+}
+</script>
+
+
+    
+<footer class="footer">
+    <div class="footer-icons">
+        <a href="index.html" class="footer-icon">
+            <img src="assets/img/icons/home.png" alt="Home">
+            <span>Home</span>
+        </a>
+        <a href="#search-input" class="footer-icon">
+            <img src="assets/img/icons/search.png" alt="Search">
+            <span>Search</span>
+        </a>
+		<a href="shop.html" class="footer-icon">
+            <img src="assets/img/icons/store.png" alt="store">
+            <span>Store</span>
+        </a>
+        <a href="https://wa.me/27726962588" class="footer-icon">
+            <img src="assets/img/icons/whatsapp.png" alt="Contact">
+            <span>Whatsapp</span>
+        </a> 
+    </div>
+</footer>
+
+</body>
+</html>

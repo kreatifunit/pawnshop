@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Teboho Pawnshop - Home</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+	<style>
+    .product { display: none; } /* Hide all products by default */
+    .product.active { display: block; } /* Show only filtered products */
+  </style>
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">☰</div>
+		<a href="index.html">
+        <img src="assets/img/logo.png" alt="Logo" class="logo"></a>
+        <div class="cart-icon" onclick="viewCart()">🛒</div>
+    </header>
+      <nav class="menu" id="menu">
+        <div class="close" id="close">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+			<li><a href="shop.html">Shop</a></li>
+			<li><a href="documents/catalogue.html">Catalogue</a></li>
+            <li><a href="documents/contacts.html">Get In Touch</a></li>
+			<li><a href="documents/terms.html">Terms & Conditions</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        
+	<div class="shop-ui">
+        <section class="search-filter">
+        <input type="text" id="searchInput" placeholder="Search products..." oninput="filterProducts()">
+        <select id="categoryFilter" onchange="filterProducts()">
+            <option value="">All Categories</option>
+			<option value="sound_system">Sound System</option>
+            <option value="tv">TV</option>
+			<option value="gaming">Gaming</option>
+			<option value="cell_phones">Cell Phone</option>
+			<option value="computer">Computer</option>
+            <!-- Add more categories as needed -->
+        </select>
+    </section>
+    
+        <section class="products">
+		
+<!---PRODUCT 1--->
+    <div class="product" data-category="computer">
+    <img src="products/computer/product1/1.jpg" alt="Product 1" class="product-image" id="productImage1">
+    <h3>Lenovo Thinkcenter Desktop</h3>
+    <p>R 2999.99</p>
+	
+	<!---Status--->
+	<div class="status-available">
+	<h5>Available</h5></div>
+	
+    <button class="view-button" onclick="document.getElementById('product1Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product1Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product1Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/computer/product1/1.jpg" alt="Product Image 1" onclick="document.getElementById('product1MainImage').src='products/computer/product1/1.jpg'">
+    <img src="products/computer/product1/2.jpg" alt="Product Image 2" onclick="document.getElementById('product1MainImage').src='products/computer/product1/2.jpg'">
+    <img src="products/computer/product1/3.jpg" alt="Product Image 3" onclick="document.getElementById('product1MainImage').src='products/computer/product1/3.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product1MainImage" class="main-image" src="products/computer/product1/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Lenovo Thinkcenter Desktop</div>
+    <div class="product-description">Lenovo All In One ThinkCentre M70A Gen3 Intel Core i5-12400 8GB 512GB Intel O/B Graphics DVDRW Windows 11 Pro LAN Port 5 Year Onsite</div>
+    <div class="company-name">Lenovo</div>
+    <div class="product-price"><strong>R 2 999.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Lenovo Thinkcenter Desktop', 2999.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+		<!---PRODUCT 2--->
+<div class="product" data-category="tv">
+    <img src="products/tv/product1/1.jpg" alt="Product 2" class="product-image" id="productImage2">
+    <h3>Hisense 40-inch(102cm) FHD LED 40A5200</h3>
+    <p>R 1499.99</p>
+	
+	<!---Status--->
+	<div class="status-available">
+	<h5>Available</h5></div>
+	
+    <button class="view-button" onclick="document.getElementById('product2Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 2 Modal -->
+	<div id="product2Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product2Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/tv/product1/1.jpg" alt="Product Image 1" onclick="document.getElementById('product2MainImage').src='products/tv/product1/1.jpg'">
+    <img src="products/tv/product1/2.jpg" alt="Product Image 2" onclick="document.getElementById('product2MainImage').src='products/tv/product1/2.jpg'">
+    <img src="products/tv/product1/3.jpg" alt="Product Image 3" onclick="document.getElementById('product2MainImage').src='products/tv/product1/3.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product2MainImage" class="main-image" src="products/tv/product1/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Hisense 40-inch(102cm) FHD LED 40A5200</div>
+    <div class="product-description">Immerse yourself in full HD brilliance, where every detail comes to life with stunning clarity and vibrant colors. 
+	Connect your multimedia devices seamlessly.
+	</div>
+    <div class="company-name">Hisense</div>
+    <div class="product-price"><strong>R 1499.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Hisense 40-inch(102cm) FHD LED 40A5200', 1499.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+		
+		<!---PRODUCT 3--->
+	<div class="product" data-category="gaming">
+    <img src="products/gaming/product1/1.jpg" alt="Product 3" class="product-image" id="productImage3">
+    <h3>Playstation 5 500gb SSD</h3>
+    <p>R 4499.99</p>
+	
+	<!---Status--->
+	<div class="status-sold">
+	<h5>Sold</h5></div>
+	
+    <button class="view-button" onclick="document.getElementById('product3Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product3Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product3Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/gaming/product1/1.jpg" alt="Product Image 1" onclick="document.getElementById('product3MainImage').src='products/gaming/product1/1.jpg'">
+    <img src="products/gaming/product1/2.jpg" alt="Product Image 2" onclick="document.getElementById('product3MainImage').src='products/gaming/product1/2.jpg'">
+    <img src="products/gaming/product1/3.jpg" alt="Product Image 3" onclick="document.getElementById('product3MainImage').src='products/gaming/product1/3.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product3MainImage" class="main-image" src="products/gaming/product1/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Playstation 5 500gb SSD</div>
+    <div class="product-description">Experience lightning fast loading with an ultra-high speed SSD. 
+	deeper immersion with support for haptic feedback, adaptive triggers,</div>
+    <div class="company-name">Sony</div>
+    <div class="product-price"><strong>R 4499.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('', 0"  
+	class="add-to-cart-button">Out Of Stock</button>
+	</div>
+    </div>
+	</div>
+	</div>
+		
+		<!---PRODUCT 4--->
+<div class="product" data-category="cell_phones">
+    <img src="products/mobile/product1/1.jpg" alt="Product 4" class="product-image" id="productImage4">
+    <h3>Samsung Note 10+</h3>
+    <p>R 3549.99</p>
+	
+	<!---Status--->
+	<div class="status-available">
+	<h5>Available</h5></div>
+	
+    <button class="view-button" onclick="document.getElementById('product4Modal').style.display='flex'">View Product</button>
+	</div>
+	<!-- Product 1 Modal -->
+	<div id="product4Modal" class="modal">
+	<div class="modal-content">
+    <span class="close-btn" onclick="document.getElementById('product4Modal').style.display='none'">&times;</span>
+    <!-- Product Images -->
+    <div class="product-images">
+    <img src="products/mobile/product1/1.jpg" alt="Product Image 1" onclick="document.getElementById('product4MainImage').src='products/mobile/product1/1.jpg'">
+    <img src="products/mobile/product1/2.jpg" alt="Product Image 2" onclick="document.getElementById('product4MainImage').src='products/mobile/product1/2.jpg'">
+    <img src="products/mobile/product1/3.jpg" alt="Product Image 3" onclick="document.getElementById('product4MainImage').src='products/mobile/product1/3.jpg'">
+    </div>
+    <!-- Main Image -->
+    <img id="product4MainImage" class="main-image" src="products/mobile/product1/1.jpg" alt="Main Product Image">
+    <!-- Product Info -->
+    <div class="product-info">
+    <div class="product-name">Samsung Note 10+</div>
+    <div class="product-description">Samsung Galaxy Note10 Android smartphone. Announced Aug 2019. 
+	Features 6.3″ display, Exynos 9825 chipset, 3500 mAh battery, 256 GB storage, 8 GB RAM.</div>
+    <div class="company-name">Samsung</div>
+    <div class="product-price"><strong>R 3549.99</strong></div>
+	<div class="image-navigation">
+	<button onclick="addToCart('Samsung Note 10+', 3549.99)"  
+	class="add-to-cart-button">Add to cart</button>
+	</div>
+    </div>
+	</div>
+	</div>
+
+</section>
+</div>
+
+    </main> 
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <button class="close-button" onclick="closeCart()">Close</button>
+        <h2>Your Cart</h2>
+        
+        <!-- Cart Items Section -->
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">Total: R 0.00</div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <div id="summaryItems"></div> <!-- Will populate dynamically -->
+            <div id="additionalCost" style="display: none;">Delivery Cost: R 0.00</div> <!-- Delivery Cost will show based on selection -->
+        </div>
+
+        <!-- Billing Address Form -->
+        <div class="billing-address">
+            <h3>Billing Address</h3>
+            <input type="text" id="billingName" placeholder="Full Name" required>
+            <input type="email" id="billingEmail" placeholder="Email" required>
+            <input type="text" id="billingAddress" placeholder="Address" required>
+            <input type="tel" id="billingPhone" placeholder="Phone Number" required>
+        </div>
+
+        <!-- Payment Methods (Updated to Dropdown) -->
+        <div class="payment-methods">
+            <h3>Payment Method</h3>
+            <label for="paymentMethod">Select Payment Method</label>
+            <select id="paymentMethod" onchange="updatePaymentDetails()">
+                <option value="directTransfer">Direct Transfer</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <div id="bankDetails" style="display: none;">
+                <h4>Banking Details</h4>
+                <p>Bank Name: Capitec Bank</p>
+                <p>Account Number: 1444105424</p>
+                <p>SWIFT Code: 40017</p>
+            </div>
+
+            <div id="paypalDetails" style="display: none;">
+                <h4>PayPal Account</h4>
+                <p>Account Email: requesteat@paypal.com</p>
+            </div>
+        </div>
+
+        <!-- Delivery or Pickup Options (Updated to Dropdown) -->
+        <div class="delivery-options">
+            <h3>Delivery Options</h3>
+            <label for="deliveryOption">Select Delivery Option</label>
+            <select id="deliveryOption" onchange="updateDeliveryCost()">
+                <option value="pickup">Pickup (No additional cost)</option>
+                <option value="delivery">Delivery (Additional Cost)</option>
+            </select>
+        </div>
+
+        <!-- Place Order Button -->
+        <button id="placeOrderBtn" onclick="placeOrder()" class="cart-button place-order-button" disabled>Place Order</button>
+        <button onclick="clearCart()" class="cart-button clear-button">🗑️ Clear My Cart</button>
+    </div>
+	
+	<!-- Shop Now Button (when cart is empty) -->
+        <div id="emptyCartMessage" style="display: none;">
+            <p>Your cart is empty.</p>
+            <a href="index.html" class="shop-now-button">Shop Now</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Function to filter products dynamically
+    function filterProducts() {
+      const searchInput = document.getElementById('searchInput').value.toLowerCase();
+      const categoryFilter = document.getElementById('categoryFilter').value;
+      const products = document.querySelectorAll('.product');
+
+      products.forEach(product => {
+        const productName = product.querySelector('p').textContent.toLowerCase();
+        const productCategory = product.dataset.category;
+
+        const matchesSearch = productName.includes(searchInput);
+        const matchesCategory = !categoryFilter || productCategory === categoryFilter;
+
+        if (matchesSearch && matchesCategory) {
+          product.classList.add('active');
+        } else {
+          product.classList.remove('active');
+        }
+      });
+    }
+
+    // Automatically filter based on URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const filter = urlParams.get('filter');
+
+    // If there is a filter in the URL, apply it
+    if (filter) {
+      document.getElementById('categoryFilter').value = filter; // Pre-select the category filter
+      filterProducts(); // Apply the filter immediately
+    } else {
+      // If no filter, show all products
+      const products = document.querySelectorAll('.product');
+      products.forEach(product => {
+        product.classList.add('active');
+      });
+    }
+
+    // Event listener for changes to filter or search input
+    document.getElementById('categoryFilter').addEventListener('change', filterProducts);
+    document.getElementById('searchInput').addEventListener('input', filterProducts);
+</script>
+
+    <script src="assets/js/script.js"></script>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Trendy Clothing Store",
+  "url": "https://www.yourwebsite.com",
+  "logo": "https://www.yourwebsite.com/assets/img/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-800-555-5555",
+    "contactType": "Customer Service",
+    "areaServed": "South Africa",
+    "availableLanguage": ["English"]
+  }
+}
+</script>
+    
+<footer class="footer">
+    <div class="footer-icons">
+        <a href="index.html" class="footer-icon">
+            <img src="assets/img/icons/home.png" alt="Home">
+            <span>Home</span>
+        </a>
+        
+        <a href="#search-input" class="footer-icon">
+            <img src="assets/img/icons/search.png" alt="Search">
+            <span>Search</span>
+        </a>
+		
+		<a href="shop.html" class="footer-icon">
+            <img src="assets/img/icons/store.png" alt="store">
+            <span>Store</span>
+        </a>
+
+        <a href="https://wa.me/27726962588" class="footer-icon">
+            <img src="assets/img/icons/whatsapp.png" alt="Contact">
+            <span>Whatsapp</span>
+        </a>
+        
+    </div>
+</footer>
+
+</body>
+</html>
